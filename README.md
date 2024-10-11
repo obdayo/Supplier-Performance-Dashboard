@@ -1,7 +1,7 @@
 Supplier Performance Dashboard
 ---
 
-<img width="643" alt="image" src="https://github.com/user-attachments/assets/97ba2b6d-8b7f-4a9d-a14e-c6b04a2173c7">
+<img width="660" alt="image" src="https://github.com/user-attachments/assets/97ba2b6d-8b7f-4a9d-a14e-c6b04a2173c7">
 
 **Table of Content:**
 ---
@@ -27,8 +27,9 @@ Some key questions the business want answering are;
 
 **Data Source**
 ---
-The Dataset used for this task was presented by [Tina Okonkwo](https://www.linkedin.com/in/augustina-okonkwo/) :
-Dataset: 
+The Dataset used for this task was presented by [Tina Okonkwo](https://www.linkedin.com/in/augustina-okonkwo/)
+
+Dataset: [Supplier Quality Dataset](https://github.com/obdayo/Supplier-Performance-Dashboard/blob/main/supplier%20data.xlsx)
 
 
 
