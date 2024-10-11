@@ -31,6 +31,21 @@ The Dataset used for this task was presented by [Tina Okonkwo](https://www.linke
 
 Dataset: [Supplier Quality Dataset](https://github.com/obdayo/Supplier-Performance-Dashboard/blob/main/supplier%20data.xlsx)
 
+**Data Preparation**
+---
+
+Completed the Data transformation in Power Query and the dataset loaded into Microsoft Power BI Desktop for modelling.
+
+The Supplier Quality Dataset Information:
+
+* The Supplier Quality Dataset consist of 9 columns and 5,227 rows for analysis.
+
+Data Cleaning for the dataset was done in the power query editor as follows:
+
+Removed Unnecessary columns
+Removed Unnecessary rows
+Each of the columns in the table were validated to have the correct data type
+
 
 
 
