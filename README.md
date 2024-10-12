@@ -42,9 +42,11 @@ The Supplier Quality Dataset Information:
 
 Data Cleaning for the dataset was done in the power query editor as follows:
 
-Removed Unnecessary columns
-Removed Unnecessary rows
-Each of the columns in the table were validated to have the correct data type
+* Created the Supplier Quality Factable and other Dimension Tables
+
+* Removed irrelevant columns and rows
+
+* Each of the columns in the table were validated to have the correct data type
 
 
 
