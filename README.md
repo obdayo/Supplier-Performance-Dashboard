@@ -42,11 +42,17 @@ The Supplier Quality Dataset Information:
 
 Data Cleaning for the dataset was done in the power query editor as follows:
 
-* Created the Supplier Quality Factable and other Dimension Tables
+* Created the Supplier Quality Factable and other Dimension Tables.
 
-* Removed irrelevant columns and rows
+* Removed irrelevant columns and rows.
 
-* Each of the columns in the table were validated to have the correct data type
+* Each of the columns in the table were validated to have the correct data type.
+
+* Removed duplicated values in the dimension tables created.
+
+* Added Index Colunm to each dimension tables, using the numbers as IDs.
+
+* Used Merge queries to merge the IDs on the dimension tables with the Fact table using inner join. 
 
 
 
