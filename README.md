@@ -9,7 +9,7 @@ Supplier Performance Dashboard
 * [Data Source](https://github.com/obdayo/Supplier-Performance-Dashboard/edit/main/README.md#data-source)
 * [Data Tranformation](https://github.com/obdayo/Supplier-Performance-Dashboard/edit/main/README.md#data-transformation)
 * [Data Modelling](https://github.com/obdayo/Supplier-Performance-Dashboard/edit/main/README.md#data-modelling)
-* DAX
+* [DAX](https://github.com/obdayo/Supplier-Performance-Dashboard/edit/main/README.md#dax)
 * Data Vizualization Dashboard
 * Insights
 
@@ -110,10 +110,15 @@ Measures used in all visualization are:
 **Defect Quantity:**
 
 * Total Defect Quantity = SUM('Supplier Quality Fact Table'[Total Defect Qty])
+  * Purpose: Calculates the total quantity of defects across all records.
 * Defect Quantity SPLY = CALCULATE([Total Defect Quantity],SAMEPERIODLASTYEAR('Date Table'[Date]))
+  * Purpose: Calculates the total defect quantity for the same period in the previous year to allow for YoY comparisons.
 * Defect quantity PM = CALCULATE([Total Defect Quantity],PARALLELPERIOD('Date Table'[Date],-1,MONTH))
+  * Purpose: Calculates the total defect quantity for the previous month, allowing for MoM analysis.
 * Month on Month DQ = DIVIDE([Total Defect Quantity] - [Total Defect quantity PM],[Total Defect quantity PM])
+  * Purpose: Calculates the percentage change in defect quantity compared to the previous month.
 * Year on Year DQ = DIVIDE([Total Defect Quantity] - [Defect Quantity SPLY],[Defect Quantity SPLY])
+  * Purpose: Calculates the percentage change in defect quantity compared to the same period last year.
 * Rank Vendor by Defect Quantity = 
          VAR _tvdq = 
              IF(ISINSCOPE(Vendor[Vendor]),(RANKX(ALL(Vendor[Vendor]),[Total Defect Quantity], ,DESC)))
@@ -123,14 +128,21 @@ Measures used in all visualization are:
              IF(SELECTEDVALUE(TopBottom[Value]) = "Top",_tvdq,_bvdq)
          RETURN
             IF(_rankig <= 'Top N Parameter'[Top N Parameter Value],[Total Defect Quantity])
+  * Purpose: Ranks vendors based on their total defect quantity. The ranking can show either "Top N" or "Bottom N" vendors depending on the selection in the TopBottom slicer and compares vendors' performance dynamically.
+
 
 **Downtime Hours:**
 
 * Total Downtime Hours = DIVIDE([Total Downtime Minutes],60)
+  * Purpose: Converts total downtime minutes into hours for easier interpretation.
 * Downtime Hours SPLY = CALCULATE([Total Downtime Hours],SAMEPERIODLASTYEAR('Date Table'[Date]))
+  * Purpose: Calculates the total downtime hours for the same period last year, enabling YoY comparisons.
 * Downtime Hours PM = CALCULATE([Total Downtime Hours],PARALLELPERIOD('Date Table'[Date],-1,MONTH))
+  * Purpose: Calculates the total downtime hours for the previous month, allowing for MoM analysis.
 * Month on Month DH = DIVIDE([Total Downtime Hours] - [Downtime Hours PM],[Downtime Hours PM])
+  * Purpose: Calculates the percentage change in downtime hours compared to the previous month.
 * Year on Year DH = DIVIDE([Total Downtime Hours] - [Downtime Hours SPLY],[Downtime Hours SPLY])
+  * Purpose: Calculates the percentage change in downtime hours compared to the same period last year.
 * Rank Vendor by Downtime Hours = 
          VAR _tvdth = 
              IF(ISINSCOPE(Vendor[Vendor]),(RANKX(ALL(Vendor[Vendor]),[Total Downtime Hours], ,DESC)))
@@ -140,6 +152,9 @@ Measures used in all visualization are:
              IF(SELECTEDVALUE(TopBottom[Value]) = "Top",_tvdth,_bvdth)
          RETURN
             IF(_rankig <= 'Top N Parameter'[Top N Parameter Value],[Total Downtime Hours])
+  * Purpose: Ranks vendors based on their total downtime hours, either showing "Top N" or "Bottom N" vendors as per user selection.
+
+This approach supports detailed, dynamic reporting and allows stakeholders to monitor performance trends and identify top and bottom performers effectively.
 
 
 
