@@ -52,7 +52,7 @@ Data Cleaning for the dataset was done in the power query editor as follows:
 
 * Added Index Colunm to each dimension tables, using the numbers as IDs.
 
-* Used Merge queries to merge the IDs on the dimension tables with the Fact table using inner join. 
+* Made use of Merge queries to merge the IDs on the dimension tables with the Fact table using inner join. 
 
 
 
