@@ -104,9 +104,42 @@ The key fields (e.g., "Vendor_ID," "Defect_ID," etc.) in the dimension tables ar
 This star schema is designed for efficient querying and analysis in Power BI. It allows users to easily slice and dice supplier quality data by various dimensions like defect type, vendor, material type, and time periods (using the Date Table).
 
 **DAX**
+---
 Measures used in all visualization are:
 
+**Defect Quantity:**
+
 * Total Defect Quantity = SUM('Supplier Quality Fact Table'[Total Defect Qty])
+* Defect Quantity SPLY = CALCULATE([Total Defect Quantity],SAMEPERIODLASTYEAR('Date Table'[Date]))
+* Defect quantity PM = CALCULATE([Total Defect Quantity],PARALLELPERIOD('Date Table'[Date],-1,MONTH))
+* Month on Month DQ = DIVIDE([Total Defect Quantity] - [Total Defect quantity PM],[Total Defect quantity PM])
+* Year on Year DQ = DIVIDE([Total Defect Quantity] - [Defect Quantity SPLY],[Defect Quantity SPLY])
+* Rank Vendor by Defect Quantity = 
+         VAR _tvdq = 
+             IF(ISINSCOPE(Vendor[Vendor]),(RANKX(ALL(Vendor[Vendor]),[Total Defect Quantity], ,DESC)))
+         VAR _bvdq = 
+             IF(ISINSCOPE(Vendor[Vendor]),(RANKX(ALL(Vendor[Vendor]),[Total Defect Quantity], ,ASC)))
+         VAR _rankig = 
+             IF(SELECTEDVALUE(TopBottom[Value]) = "Top",_tvdq,_bvdq)
+         RETURN
+            IF(_rankig <= 'Top N Parameter'[Top N Parameter Value],[Total Defect Quantity])
+
+**Downtime Hours:**
+
+* Total Downtime Hours = DIVIDE([Total Downtime Minutes],60)
+* Downtime Hours SPLY = CALCULATE([Total Downtime Hours],SAMEPERIODLASTYEAR('Date Table'[Date]))
+* Downtime Hours PM = CALCULATE([Total Downtime Hours],PARALLELPERIOD('Date Table'[Date],-1,MONTH))
+* Month on Month DH = DIVIDE([Total Downtime Hours] - [Downtime Hours PM],[Downtime Hours PM])
+* Year on Year DH = DIVIDE([Total Downtime Hours] - [Downtime Hours SPLY],[Downtime Hours SPLY])
+* Rank Vendor by Downtime Hours = 
+         VAR _tvdth = 
+             IF(ISINSCOPE(Vendor[Vendor]),(RANKX(ALL(Vendor[Vendor]),[Total Downtime Hours], ,DESC)))
+         VAR _bvdth = 
+             IF(ISINSCOPE(Vendor[Vendor]),(RANKX(ALL(Vendor[Vendor]),[Total Downtime Hours], ,ASC)))
+         VAR _rankig = 
+             IF(SELECTEDVALUE(TopBottom[Value]) = "Top",_tvdth,_bvdth)
+         RETURN
+            IF(_rankig <= 'Top N Parameter'[Top N Parameter Value],[Total Downtime Hours])
 
 
 
