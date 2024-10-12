@@ -7,7 +7,7 @@ Supplier Performance Dashboard
 ---
 * [Problem of Statement](https://github.com/obdayo/Supplier-Performance-Dashboard/edit/main/README.md#problem-of-statement)
 * [Data Source](https://github.com/obdayo/Supplier-Performance-Dashboard/edit/main/README.md#data-source)
-* Data Preparation
+* [Data Preparation](https://github.com/obdayo/Supplier-Performance-Dashboard/edit/main/README.md#data-preparation)
 * Data Modelling
 * DAX
 * Data Vizualization Dashboard
@@ -42,7 +42,7 @@ The Supplier Quality Dataset Information:
 
 Data Cleaning for the dataset was done in the power query editor as follows:
 
-* Created the Supplier Quality Factable and other Dimension Tables.
+* Created the Supplier Quality Fact table and 6 Dimension tables to model the data.
 
 * Removed irrelevant columns and rows.
 
