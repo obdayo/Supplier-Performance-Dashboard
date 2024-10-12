@@ -7,7 +7,7 @@ Supplier Performance Dashboard
 ---
 * [Problem of Statement](https://github.com/obdayo/Supplier-Performance-Dashboard/edit/main/README.md#problem-of-statement)
 * [Data Source](https://github.com/obdayo/Supplier-Performance-Dashboard/edit/main/README.md#data-source)
-* [Data Preparation](https://github.com/obdayo/Supplier-Performance-Dashboard/edit/main/README.md#data-preparation)
+* [Data Tranformation and Modelling](https://github.com/obdayo/Supplier-Performance-Dashboard/edit/main/README.md#data-transformation-and-modelling)
 * Data Modelling
 * DAX
 * Data Vizualization Dashboard
@@ -31,28 +31,25 @@ The Dataset used for this task was presented by [Tina Okonkwo](https://www.linke
 
 Dataset: [Supplier Quality Dataset](https://github.com/obdayo/Supplier-Performance-Dashboard/blob/main/supplier%20data.xlsx)
 
-**Data Preparation**
+**Data Transformation and Modelling**
 ---
 
-Completed the Data transformation in Power Query and the dataset loaded into Microsoft Power BI Desktop for modelling.
+The **Supplier Quality dataset**, comprising **9 columns** and **5,227 rows**, was successfully transformed and loaded into Microsoft Power BI Desktop for advanced modeling and analysis.
 
-The Supplier Quality Dataset Information:
+Key steps taken during the data transformation process in Power Query Editor included:
 
-* The Supplier Quality Dataset consist of 9 columns and 5,227 rows for analysis.
+* **Supplier Quality Fact Table Creation:** Developed a central fact table along with six dimension tables to optimize the data model for efficient analysis.
 
-Data Cleaning for the dataset was done in the power query editor as follows:
+* **Data Cleaning and Validation:** Removed irrelevant columns and rows, ensuring the dataset was lean and focused. Each column was validated for accuracy, ensuring appropriate data types were applied across the tables.
 
-* Created the Supplier Quality Fact table and 6 Dimension tables to model the data.
+* **Duplicate Management:** Identified and removed duplicate entries within the dimension tables to maintain data integrity and accuracy.
 
-* Removed irrelevant columns and rows.
+* **Indexing for Table Linking:** Introduced an index column in each dimension table to serve as unique IDs, ensuring precise table relationships.
 
-* Each of the columns in the table were validated to have the correct data type.
+* **Data Integration with Merge Queries:** Leveraged Power Query’s Merge functionality to establish relationships between the dimension tables and the fact table via inner joins, using the newly created ID fields for optimal data linkage.
 
-* Removed duplicated values in the dimension tables created.
+This structured approach ensured a clean, efficient, and well-modeled dataset, ready for insightful reporting and analysis within Power BI.
 
-* Added Index Colunm to each dimension tables, using the numbers as IDs.
-
-* Made use of Merge queries to merge the IDs on the dimension tables with the Fact table using inner join. 
 
 
 
