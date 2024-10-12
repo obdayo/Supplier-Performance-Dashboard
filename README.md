@@ -8,7 +8,7 @@ Supplier Performance Dashboard
 * [Problem of Statement](https://github.com/obdayo/Supplier-Performance-Dashboard/edit/main/README.md#problem-of-statement)
 * [Data Source](https://github.com/obdayo/Supplier-Performance-Dashboard/edit/main/README.md#data-source)
 * [Data Tranformation](https://github.com/obdayo/Supplier-Performance-Dashboard/edit/main/README.md#data-transformation)
-* Data Modelling
+* [Data Modelling](https://github.com/obdayo/Supplier-Performance-Dashboard/edit/main/README.md#data-modelling)
 * DAX
 * Data Vizualization Dashboard
 * Insights
@@ -100,7 +100,15 @@ The lines connecting the fact table to the dimension tables represent relationsh
 The key fields (e.g., "Vendor_ID," "Defect_ID," etc.) in the dimension tables are linked to corresponding fields in the fact table to allow for proper data joins.
 
 **Purpose:**
+
 This star schema is designed for efficient querying and analysis in Power BI. It allows users to easily slice and dice supplier quality data by various dimensions like defect type, vendor, material type, and time periods (using the Date Table).
+
+**DAX**
+Measures used in all visualization are:
+
+* Total Defect Quantity = SUM('Supplier Quality Fact Table'[Total Defect Qty])
+
+
 
 
 
