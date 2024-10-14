@@ -10,20 +10,22 @@ Supplier Performance Dashboard
 * [Data Tranformation](https://github.com/obdayo/Supplier-Performance-Dashboard/edit/main/README.md#data-transformation)
 * [Data Modelling](https://github.com/obdayo/Supplier-Performance-Dashboard/edit/main/README.md#data-modelling)
 * [DAX](https://github.com/obdayo/Supplier-Performance-Dashboard/edit/main/README.md#dax)
-* Data Vizualization Dashboard
-* Insights
+* [Data Visualization Dashboard](https://github.com/obdayo/Supplier-Performance-Dashboard/edit/main/README.md#data-visualization-dashboard)
+* [Insights](https://github.com/obdayo/Supplier-Performance-Dashboard/edit/main/README.md#insights)
 
 **Problem of Statement:**
 ---
-This project contains the Supplier Quality & Performance Dashboard created using Power BI for Enterprise Manufacturers that reflects all relevant Key Performance Indicators (KPIs) and Business questions that were answered.
+This project features the Supplier Quality & Performance Dashboard, developed using Power BI for Enterprise Manufacturers. The dashboard provides comprehensive visibility into critical Key Performance Indicators (KPIs) and addresses core business questions related to supplier quality and operational performance.
 
-Some key questions the business want answering are;
+The primary business objectives include answering the following analytical queries:
 
-* Which vendors/plants are causing the greatest defect quantity?
-* Which vendors/plants are causing the greatest downtime?
-* Is there a particular combination of material and vendor that perform poorly?
-* Is there a particular combination of Vendor and plant that performs poorly?
-* How does the same vendor and material perform across different plants?
+* Which vendors or plants are responsible for the highest defect quantities?
+* Which vendors or plants are contributing to the most significant downtime?
+* Are there specific vendor-material combinations that exhibit poor performance?
+* Are there specific vendor-plant combinations that underperform?
+* How does the performance of the same vendor and material vary across different plants?
+
+This dashboard equips decision-makers with actionable insights to drive process improvements and enhance overall operational efficiency.
 
 **Data Source**
 ---
@@ -34,7 +36,7 @@ Dataset: [Supplier Quality Dataset](https://github.com/obdayo/Supplier-Performan
 **Data Transformation**
 ---
 
-The **Supplier Quality dataset**, comprising **9 columns** and **5,227 rows**, was successfully transformed and loaded into Microsoft Power BI Desktop for advanced modeling and analysis.
+The **Supplier Quality dataset**, comprising **9 columns** and **5,227 rows**, was successfully transformed and loaded into Microsoft Power BI Desktop making use of an excel document for advanced modeling and analysis.
 
 Key steps taken during the data transformation process in Power Query Editor included:
 
@@ -165,6 +167,51 @@ Measures used in all visualization are:
   * Purpose: Ranks vendors based on their total downtime hours, either showing "Top N" or "Bottom N" vendors as per user selection.
 
 This approach supports detailed, dynamic reporting and allows stakeholders to monitor performance trends and identify top and bottom performers effectively.
+
+**Data Visualization Dashboard**
+---
+
+Data visualization for the data analysis (DAX) was done in Microsoft Power BI Desktop:
+
+Dashboard: [View Dashboard](https://app.powerbi.com/view?r=eyJrIjoiNTZkMmQ3NzUtYjY3ZC00YTBhLTgwMGMtMWFlNWU0MTcwNTJjIiwidCI6IjZiMTZjODcyLWY0MTQtNDZjZS1hNTNkLWJlNjRiYjA3NTk0NSJ9&pageName=ReportSectiona63f8e1bcaff3261d734)
+
+Shows visualizations from Supplier Quality & Performance Dashboard:
+
+<p>
+    <h3 align ="center">Overview</h3>
+</p>
+
+
+<img width="750" alt="image" src="https://github.com/user-attachments/assets/96816e95-722b-4505-a8e5-dd1b82f7f5b0">
+
+<p>
+    <h3 align ="center">Vendor Performance</h3>
+</p>
+
+<img width="750" alt="image" src="https://github.com/user-attachments/assets/c8524408-c217-469a-8c31-ee89e4755863">
+
+<p>
+    <h3 align ="center">Material Performance</h3>
+</p>
+
+<img width="750" alt="image" src="https://github.com/user-attachments/assets/440e1b5d-27af-423a-a8ce-cd9b6abe0353">
+
+**Insights:**
+---
+
+The Power BI dashboard provides a comprehensive view of supplier performance, focusing on defect quantity, downtime hours, and cost impacts.
+
+Key highlights include:
+
+* **Defect Quantity:** 2.60 billion defects, with a 4.25% increase from last month and a 123.32% spike compared to last year.
+
+* **Downtime Hours:** 215.81K hours, translating to a downtime cost of $2.16M, with similar monthly and yearly increases.
+* 
+* **Worst Performers:** Vendors like Avamm and plants like Charles City are key underperformers, with high defect rates.
+* 
+* **Trends:** Monthly defect trends show a peak in October, with significant impact (31.71%) and high rejection rates (28.43%).
+
+These insights highlight critical areas of inefficiency in manufacturing processes.
 
 
 
