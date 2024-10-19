@@ -15,15 +15,26 @@ Supplier Performance Dashboard
 
 **Problem of Statement:**
 ---
-This project features the Supplier Quality & Performance Dashboard, developed using Power BI for Enterprise Manufacturers. The dashboard provides comprehensive visibility into critical Key Performance Indicators (KPIs) and addresses core business questions related to supplier quality and operational performance.
+Enterprise Manufacturers Ltd is facing significant challenges in managing and assessing the quality of raw materials provided by various suppliers. The absence of a centralized procurement system has led to inconsistencies across multiple plants in terms of supplier performance and material quality, resulting in inefficiencies and operational downtime. Currently, there is no standardized method to validate the quality of goods supplied by different vendors, nor a consistent approach across plants for evaluating supplier performance.
 
-The primary business objectives include answering the following analytical queries:
+The company's programme management team has identified a need to centralize and evaluate supplier quality, and recent efforts have been made to consolidate data on materials, defects, and vendors. This includes data on defective materials and the corresponding downtime caused by these defects. However, the lack of proper data visualization and analysis tools has hindered the company’s ability to make informed decisions about supplier performance.
 
-* Which vendors or plants are responsible for the highest defect quantities?
-* Which vendors or plants are contributing to the most significant downtime?
-* Are there specific vendor-material combinations that exhibit poor performance?
-* Are there specific vendor-plant combinations that underperform?
-* How does the performance of the same vendor and material vary across different plants?
+The primary issues include:
+
+* Inconsistent vendor performance evaluation across different plants.
+* Unidentified patterns in defective materials and their impact on production downtime.
+* Difficulty in identifying the combination of materials and vendors that consistently underperform.
+* Enterprise Manufacturers Ltd is in the process of adopting Power BI for data analysis and visualization, and management has enlisted experts to help model the consolidated data and address key questions around vendor and plant performance. The business aims to use this data to identify problem areas, streamline procurement processes, and enhance supplier relationships.
+
+The key business questions that need to be addressed include:
+
+* Which vendors or plants are contributing to the highest defect quantities?
+* Which vendors or plants are responsible for the most downtime?
+* Are there specific material and vendor combinations that consistently perform poorly?
+* Are there specific vendor and plant combinations that consistently perform poorly?
+* How do the same vendor and material combinations perform across different plants?
+  
+This analysis will provide critical insights to help management improve procurement strategies, reduce defects, minimize downtime, and optimize overall operational performance.
 
 This dashboard equips decision-makers with actionable insights to drive process improvements and enhance overall operational efficiency.
 
